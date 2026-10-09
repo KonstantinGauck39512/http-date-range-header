@@ -1,0 +1,17 @@
+{
+  "name": "http-date-range-header",
+  "version": "0.1.0",
+  "description": "Parses and validates HTTP If-Range header values, distinguishing between entity-tag and HTTP-date forms.",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": "./src/index.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "dependencies": {}
+}
