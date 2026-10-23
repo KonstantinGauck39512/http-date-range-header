@@ -49,3 +49,10 @@ strings returned as `kind`).
 - **Only IMF-fixdate is accepted** as the date form. RFC 850 comma-suffix dates
   and asctime dates are reported as `invalid`, which is stricter than general
   HTTP date parsers but correct for `If-Range`.
+
+## Performance
+
+The window keeps a bounded buffer, so `push` is constant time and memory does not
+grow with the length of the stream. `peak` and `trough` are linear in the window
+size, which is the trade that keeps `push` cheap.
+
